@@ -1,0 +1,30 @@
+Grand Titre
+=========
+Petit titre
+---------
+
+Data set Airquality
+
+```{r}
+library(datasets)
+data("airquality")
+summary(airquality)
+```
+
+Les correlations entre features:
+
+```{r}
+pairs(airquality)
+```
+
+Linear model
+
+```{r}
+library(stats)
+names(airquality)
+fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
+```
+
+
+et voilà

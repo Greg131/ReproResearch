@@ -1,0 +1,105 @@
+My first knitr document
+---
+
+This is text
+
+```{r}
+set.seed(1)
+x <- rnorm(100)
+mean(x)
+```
+
+```{r secoindpart}
+set.seed(1)
+x <- rnorm(200)
+mean(x)
+```
+
+pas d'echo pour simu
+
+```{r simulation, echo=FALSE}
+set.seed(1)
+x <- rnorm(2300)
+mean(x)
+```
+
+pas de res pour simu2
+
+```{r simulation2, echo=TRUE, results='hide'}
+set.seed(1)
+x <- rnorm(2300)
+mean(x)
+```
+
+
+#In line text computation
+
+```{r sim, echo=FALSE, results='hide'}
+time  <- format(Sys.time(), "%a %b %d %X %Y")
+rand <- rnorm(1)
+```
+
+  
+Affiche les variables time :  `r time` et aussi my favorite random nb : `r rand` xxx
+
+
+##Incorporating graphique
+
+Let's first simulate data
+```{r simudata, echo=TRUE}
+x  <- rnorm(100); y <- x+ rnorm(100, sd=0.5)
+```
+Here is a scaterplot of the data
+```{r scatterplot, fig.height=4}
+par(mar = c(5,4,1,1), las = 1)
+plot(x,y, main = "mes data")
+```
+
+
+##Making Table
+
+Let's first simulate data
+Linear model
+
+```{r}
+library(datasets)
+data(airquality)
+fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+```
+Here is a table of linear regression coefficients
+```{r showtable, results='asis'}
+library(xtable)
+xt <- xtable(summary(fit))
+print(xt,type = "html")
+```
+
+
+#Settiong global option
+at the top of the doc???
+```{r setoptions, echo=FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE, results = "hide")
+```
+on ne voit rien
+```{r}
+set.seed(1)
+x <- rnorm(100)
+mean(x)
+```
+on voit code mais pas results
+```{r echo=TRUE}
+set.seed(1)
+x <- rnorm(100)
+mean(x)
+```
+
+
+Let's first simulate data
+```{r simudatabis, echo=TRUE}
+x  <- rnorm(100); y <- x+ rnorm(100, sd=0.5)
+```
+Here is a scaterplot of the data
+```{r scatterplotbis, fig.height=4}
+par(mar = c(5,4,1,1), las = 1)
+plot(x,y, main = "mes data")
+```

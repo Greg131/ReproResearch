@@ -1,0 +1,120 @@
+---
+title: "ReproResearch"
+author: "G ARGENTON"
+date: "8 novembre 2015"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+*This text will appear italicized!*
+
+_Italic_
+
+__bold__
+
+**This text will appear bold!**
+
+## This is a secondary heading 
+### This is a tertiary heading
+
+# This is a 1 heading 
+
+Grand Titre (idem 1 diese)
+============
+ 
+moyen titre (idem 2 dieses)
+----------
+ 
+- first item in list 
+- second item in list 
+- third item in list
+
+* first item in list 
+* second item in list 
+* third item in list
+
+$ first item in list 
+$ second item in list 
+$ third item in list
+
+
+1. first item in list 
+2. second item in list 
+3. third item in list
+
+1. first item in list 
+6. second item in list 
+3. third item in list
+
+
+1 first item in list 
+2 second item in list 
+3 third item in list
+
+[Johns Hopkins Bloomberg School of Public Health](http://www.jhsph.edu/)  
+[Download R](http://www.r-project.org/)  
+[RStudio](http://www.rstudio.com/) 
+
+I spend so much time reading [R bloggers][1] and [Simply Statistics][2]!
+
+[1]: http://www.r-bloggers.com/ "R bloggerssss"  
+[2]: http://simplystatistics.org/ "Simply Statistics"
+
+First line
+Second line
+
+First line  
+Second line
+
+
+A First Level Header
+====================
+
+A Second Level Header
+---------------------
+
+Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.
+
+The quick brown fox jumped over the lazy
+dog's back.
+
+### Header 3
+
+> This is a blockquote.
+> 
+> This is the second paragraph in the blockquote.
+>
+> ## This is an H2 in a blockquote
+
+If you put blank lines between items, you’ll get -p- tags for the list item text. You can create multi-paragraph list items by indenting the paragraphs by 4 spaces or 1 tab:
+
+*   A list item.  
+
+    With multiple paragraphs.
+
+*   Another item in the list.
+
+
+Image syntax is very much like link syntax.
+
+Inline (titles are optional):
+
+![alt text](/Users/greg/Dropbox/Datascience/Universite_Johns-Hopkins/Recherche_reproductible/data/600px-HI-78.png "Title")
+
